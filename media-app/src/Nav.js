@@ -1,10 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 import { VscClearAll } from "react-icons/vsc";
+import { useRef, useState } from "react";
+import { FaBars } from "react-icons/fa";
+import { FaXmark } from "react-icons/fa6";
+import { Link } from "react-router-dom";
+import "./css/Nav.css";
 
 
-const Nav = ({search,setSearch}) => {
+const Nav = ({isOpen, toggleMenu,search,setSearch,clearSearch}) => {
   
+  const currentRef = useRef(null);
+  
+
   return (
     <nav className="Nav">
       <form className="searchForm" onSubmit={(e) => e.preventDefault()}>
@@ -18,16 +26,22 @@ const Nav = ({search,setSearch}) => {
           autoFocus
           required
           label="search posts"
-          
+          ref={currentRef}
         />
 
-        <VscClearAll className="clear-icon"
-          onClick={ ()=> setSearch('')} />
+        <VscClearAll
+          className="clear-icon"
+          onClick={() => clearSearch(currentRef)}
+        />
       </form>
-      <ul>
+
+      <button className="menu-btn" onClick={toggleMenu}>
+        {isOpen ? <FaXmark size={24} /> : <FaBars size={24} />}
+      </button>
+      
+      <ul className="nav-menu">
         <li>
-          {" "}
-          <Link to="/">Home</Link>{" "}
+          <Link to="/">Home</Link>
         </li>
 
         <li>

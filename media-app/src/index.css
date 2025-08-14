@@ -1,19 +1,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-
 /* reset page........................................................ */
 
 *{
   margin: 0;
   padding: 0;
-  box-sizing: border-box;;
+  box-sizing: border-box;
 }
 
 /* General styles.................................................... */
 html{
   font-size: 16px;
-  border: 3px solid black;
   min-height: 100%;
   display:grid;
 }
@@ -23,266 +21,92 @@ body {
   font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-   /* border: 2px solid black; */
    min-height: 100%;
    background-color: white;
-   padding: 0 0 20px;
    width: 100%;
-   
+   overflow-x: hidden;
 }
-
 
 /* root container for div.......................................  */
 #root{
   display: flex;
-  justify-content: center;
-  align-items:center;
   width: 100%;
   height: 100%;
-  /* border: 2px solid black; */
 }
 
 /* App.js container........................................... */
 .App{
   width: 100%;
   height: 100%;
-  max-width: 800px;
-  border: 2px solid red;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  flex: 1;
   align-items: center;
   justify-content:flex-start;
-  
-  
-}
-/* Header.js fixed-alignment style......................................  */
-
-.fixed-alignment{
-  /* border: 2px solid black; */
-  position: sticky;
-  top: 0px;
-  width: 100%;
-  z-index: 1000;
- 
 }
 
-/* Header  and footer.js container.................................... */
+/* ............................................common mediaquery responsive setup */
+@media screen and (min-width: 600px){
 
-.header,footer{
-  width:100%;
-  /* border: 2px solid blue; */
-  padding: 1rem;
-  background-color: #66d8f5;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  text-align: center;
-  
-}
-
-.header h1{
-  font-size: 1.5rem;;
-}
-
-footer{
-    padding: 0.75rem;
-    display: grid;
-    place-content: center;
+   
+   .menu-btn{
+    display: none;
+   }
+   .sidebar{
+    display: none;
+    transform: translateX(-100%);
+   }
+    .sidebar.active {
+      display: none;
+      transform: translateX(-100%);
+  }
    
 }
 
+@media screen and (max-width: 600px){
 
-/* Nav.js continer styles.................................*/
-
-.Nav{
-  width: 100%;
-  /* border: 2px solid red; */
-  background-color: #333;
-  display: flex;
-  
-  
-  
+   .sidebar-menu{
+    display: block;
+   }
+   .menu-btn{
+    display: block;
+   }
+     .Nav .nav-menu {
+    display: none;
+  }
 }
 
-.searchForm{
-  width: 50%;
-  padding: 1rem ;
-  /* border: 2px solid white; */
-  position: relative;
-}
+/*............................................... Dark mode preference overrides for common*/
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212; /* dark background */
+    color: #ffffff; /* white text */
+  }
 
-.searchForm input[type="text"]{
-  width: 100%;
-  min-height: 48px;
-  font-size: calc(0.5rem + 0.9vw);
-  font-family: 'Open Sans', sans-serif;
-  padding: 0.25rem;
-  border-radius: 0.75rem;
-  outline:none;
-  border: none;
-   
-}
+  header, footer {
+    background: linear-gradient(90deg, #181818, #202020); /* dark gradient */
+    color: #fff;
+  }
 
-.Nav ul{
-  list-style: none;
-  color: white;
-  /* border: 2px solid white; */
-  display: flex;
-  align-items: center;
-  flex-wrap: nowrap;
-  gap: 10px;
-  width: 50%;
-  justify-content: flex-end;
-}
+  .sidebar {
+    background-color: #1e1e2f; /* dark navy-like tone */
+    color: #e0e0e0;
+  }
 
-.Nav li{
-  
-  padding: 1rem;
-}
-.Nav li:hover,
-.Nav li:focus{
-  padding: 1rem;
-}
+  a {
+    color: #b3d4fc; /* soft blue links */
+  }
 
-.Nav li a{
-  color:white;
-  text-decoration: none;
-}
-
-.Nav li a:hover{
-  color:grey;
-}
-
-/* home.js container ............................................... */
-
-.home{
-  /* border: 2px solid black; */
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  padding: 0.75rem;
-  
- 
-}
-
-/* post.js component style.......................................... */
-
-.post{
-  border-bottom: 1px solid black;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 0.25rem;
-  
-}
-
-/* Newpost.js component style....................................... */
-.newpost{
-  /* border: 2px solid black; */
-  width: 98%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 0.25rem;
-  
-}
-
-.newpost-form{
-  /* border: 2px solid black; */
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  padding: 0.25rem;
-  
-}
-
-.newpost-form input{
-   border-top: 2px solid black;
-   border-right: 1px solid black;
-   border-bottom: 1px solid black;
-   border-left: 2px solid black;
-   width: 100%;
-   border-radius: 0.25rem;
-   padding: 0 0.25rem 0;
-   height: 3rem;
-   font-size: calc(1rem + 0.5vw);
-   line-height: 1.2;
-   vertical-align: text-top;
-   outline: none;
-}
-
-.newpost-form input::placeholder{
-  font-size: calc(1rem + 0.5vw);
-  color:gray;
-  text-align: start;
-  background-color: transparent;
-  vertical-align: text-top;
-
-}
-
-.newpost-form textarea{
-  border-top: 2px solid black;
-  border-right: 1px solid gray;
-  border-bottom: 1px solid gray;
-  border-left: 2px solid black;
-  width: 100%;
-  border-radius: 0.25rem;
-  padding: 0.25rem 0.25rem 0;
-  min-height: 160px;
-  font-size: calc(1rem + 0.5vw);
-  line-height: 1.2;
-  vertical-align: text-top;
-  max-width: 760px;
-  outline: none;
-}
-
-
-.newpost-form textarea::placeholder{
-  font-size: calc(1rem + 0.5vw);
-  color:gray;
-  text-align: start;
-  background-color: transparent;
-  vertical-align: text-top;
-
-}
-
-.newpost-form .send-button{
-  width: 10%;
-  height:30px;
-  border-radius: 10px;
-  border:none;
-  margin-top: 20px;
-  background-color: rgb(50, 163, 233);
-  color: white;
-  font-size: calc(1rem + 0.3vw);
-  position: relative;
-  left: 88%;
-  top: -10px;
-  outline: none;
-  padding: calc(0.2rem + 0.1vw);
-  
-}
-
-.newpost-form .send-button:hover{
-  background-color: green;
-  cursor: pointer;
-  transform: scale(1.1);
-}
-
-/*Nav.js component clear -icon setutp.................................... */
-
-.clear-icon{
-  position: absolute;
-  left: calc(100% - 15%);
-  top: calc(48px - 2.14vw);
-  font-size: calc(0.59rem + 1.5vw);
-  cursor: pointer;
-}
-
-.clear-icon:hover{
-  color:red;
-}
+  a:hover {
+    background-color: #2a2a3d; /* subtle hover for dark mode */
+  }
+  body  .post{
+    border-bottom: 1px solid white;
+  }
+  .clear-icon{
+    color: black;
+  }
+   body .postpage-post{
+    border-bottom: 1px solid white;
+  }
+} 
