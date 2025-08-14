@@ -1,0 +1,43 @@
+
+.send-icon{
+  position: absolute;
+  left: 88%;
+  font-size: calc(0.8rem + 1.5vw);
+  color: blue;
+  top: 85%;
+  
+}
+
+.send-icon:hover{
+  cursor: pointer;
+  color: green;
+  transform: scale(1.2);
+  font-size: calc(0.9rem + 1.8vw);
+}
+
+
+.launch {
+  animation: rocket-launch 1s ease-in forwards;
+}
+
+
+/* ................................rocklanuch animation in EditPost.js component */
+
+@keyframes rocket-launch {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+  20% {
+    transform: translateY(-40px) translateX(200px) ;
+  }
+  50% {
+    transform: translateY(-300px) translateX(300px) translateZ(-300px) ;
+    opacity: 0.9;
+  }
+  
+  100% {
+    transform:  translateX(400px) ;
+    opacity: 0;
+  }
+}

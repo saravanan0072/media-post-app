@@ -1,0 +1,12 @@
+
+.missing{
+  /* border: 3px solid black; */
+  width: 100%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: calc(0.5rem + 1.2vw);
+}

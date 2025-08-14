@@ -1,0 +1,46 @@
+
+/* Header.js fixed-alignment style......................................  */
+
+.fixed-alignment{
+  /* border: 2px solid black; */
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  z-index: 1000;
+ 
+}
+
+
+/* Header.js container.................................... */
+
+.header{
+  width:100%;
+  /* border: 2px solid blue; */
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* modern gradient */
+  color: white;
+
+}
+
+.header h1{
+  font-size: 1.5rem;;
+}
+
+
+/* ....................................custom hooks css for mobile and tablet ,labtop icons in header.js component  */
+
+.mobile-icon{
+  font-size: calc(1rem + 2.5vw);
+}
+
+.tablet-icon{
+  font-size: calc(1.2rem + 2.6vw);
+}
+
+.laptop-icon{
+  font-size: calc(1.2rem + 2.4vw);
+}

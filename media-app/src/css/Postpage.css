@@ -1,0 +1,74 @@
+
+.postpage{
+  /* border: 2px solid black; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.postpage-post{
+  border-bottom: 2px solid black;
+  font-size: calc(0.7rem + 1.3vw);
+  padding: 0.75rem 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap:10px;
+  
+}
+
+
+.delete-icon:hover{
+  cursor: pointer;
+  color: red;
+  transform: scale(1.2);
+}
+
+.postpage-post-body{
+   text-align: justify;
+}
+
+
+.back-icon{
+  position: relative;
+  left: 1%;
+  font-size: calc(0.7rem + 1.5vw);
+
+}
+
+.back-icon:hover{
+  cursor: pointer;
+  color: green;
+  transform: scale(1.2);
+}
+
+
+
+.postpage-arranged{
+  /* border: 2px solid blue; */
+  position: relative;
+  width: 15%;
+  left: 85%;
+  display: flex;
+  justify-content: center;
+  gap: 19px;
+  bottom: -29px;
+}
+
+.edit-icon:hover{
+  cursor: pointer;
+  color: green;
+  transform: scale(1.2)
+}
+
+.postpage-datetime{
+  font-size: calc(0.4rem + 1.3vw);
+}
+
+.postpage-postbody{
+  text-align: justify;
+  font-size:calc(0.8rem + 1.3vw); 
+}

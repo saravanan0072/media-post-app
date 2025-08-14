@@ -1,0 +1,98 @@
+.newpost{
+  /* border: 2px solid black; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0.25rem;
+  flex: 1;
+  
+}
+
+.newpost-form{
+  /* border: 2px solid black; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0.25rem;
+  height: 100%;
+  
+}
+
+.newpost-form input{
+   border-top: 2px solid black;
+   border-right: 1px solid black;
+   border-bottom: 1px solid black;
+   border-left: 2px solid black;
+   width: 100%;
+   border-radius: 0.25rem;
+   padding: 0 0.25rem 0;
+   height: 3rem;
+   font-size: calc(1rem + 0.5vw);
+   line-height: 1.2;
+   vertical-align: text-top;
+   outline: none;
+}
+
+.newpost-form input::placeholder{
+  font-size: calc(1rem + 0.5vw);
+  color:gray;
+  text-align: start;
+  background-color: transparent;
+  vertical-align: text-top;
+
+}
+
+.newpost-form textarea{
+  border-top: 2px solid black;
+  border-right: 1px solid gray;
+  border-bottom: 1px solid gray;
+  border-left: 2px solid black;
+  width: 100%;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.25rem 0;
+  min-height: 160px;
+  font-size: calc(1rem + 0.5vw);
+  line-height: 1.2;
+  vertical-align: text-top;
+  /* max-width: 760px; */
+  outline: none;
+  height: 100%;
+  max-width: 100%;
+  position: relative;
+}
+
+
+.newpost-form textarea::placeholder{
+  font-size: calc(1rem + 0.5vw);
+  color:gray;
+  text-align: start;
+  background-color: transparent;
+  vertical-align: text-top;
+  
+
+}
+
+.newpost-form .send-button{
+  width: 10%;
+  height:30px;
+  border-radius: 10px;
+  border:none;
+  margin-top: 20px;
+  background-color: rgb(50, 163, 233);
+  color: white;
+  font-size: calc(1rem + 0.3vw);
+  position: relative;
+  left: 88%;
+  top: -10px;
+  outline: none;
+  padding: calc(0.2rem + 0.1vw);
+  
+}
+
+.newpost-form .send-button:hover{
+  background-color: green;
+  cursor: pointer;
+  transform: scale(1.1);
+}

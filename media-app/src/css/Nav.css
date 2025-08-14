@@ -1,0 +1,91 @@
+
+.Nav{
+  width: 100%;
+  background-color: #1e1e2f;
+  display: flex;
+}
+
+
+ .nav-menu{
+  list-style: none;
+  color: white;
+  display: flex;
+  justify-content:space-evenly;
+  padding: 8px;
+  gap: 5px;
+  width: 50%;
+
+}
+
+
+.Nav li{
+  
+  padding: 1rem;
+}
+.Nav li:hover,
+.Nav li:focus{
+  padding: 1rem;
+}
+
+.Nav li a{
+  color:white;
+  text-decoration: none;
+}
+
+.Nav li a:hover{
+  color:grey;
+}
+
+.searchForm{
+  width: 50%;
+  padding: 1rem ;
+  /* border: 2px solid white; */
+  position: relative;
+}
+
+.searchForm input[type="text"]{
+  width: 100%;
+  min-height: 48px;
+  font-size: calc(0.5rem + 0.9vw);
+  font-family: 'Open Sans', sans-serif;
+  padding: 0.25rem;
+  border-radius: 0.75rem;
+  outline:none;
+  border: none;
+   
+}
+
+
+/*Nav.js component clear -icon setutp.................................... */
+
+.clear-icon{
+  position: absolute;
+  left: calc(100% - 15%);
+  top: calc(48px - 2.14vw);
+  font-size: calc(0.59rem + 1.5vw);
+  cursor: pointer;
+}
+
+.clear-icon:hover{
+  color:red;
+}
+
+
+/* ............................custom hooks based for hamber icon side bar in Nav.js component */
+
+.menu-btn{
+  position: relative;
+  left: 39%;
+  height: 30px;
+  width: 30px;
+  top: 20px;
+  padding: 2.5px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: white;
+  font-size: calc(1rem + 1.5vw);
+
+  
+}

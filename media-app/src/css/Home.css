@@ -1,0 +1,50 @@
+
+.home{
+  /* border: 2px solid black; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0.75rem;
+  flex: 1;
+  /* border: 2px solid white; */
+  
+}
+
+/* loading spin animation and setup process */
+
+.loading{
+   /* border: 2px solid white; */
+   width: 100px;
+   height: 100px;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   top: 40%;
+   left: 40%;
+   font-size: 35px;
+}
+
+
+.spinner{
+  color: green;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* error message styles  */
+
+.home .errorMessage{
+     /* border: 2px solid white; */
+     text-align: center;
+     color: red;
+     position: relative;
+     top: 50%;
+}
