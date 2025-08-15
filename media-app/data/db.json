@@ -1,0 +1,28 @@
+{
+  "posts": [
+    {
+      "datetime": "August 10, 2025 4:45:13 PM",
+      "title": "ninth post",
+      "body": "this is just testing for json-server for learning purpose of react in frontend ",
+      "id": "b5f0"
+    },
+    {
+      "datetime": "August 13, 2025 7:41:56 PM",
+      "title": "the hunter story",
+      "body": "the hunter story is reached the 1m views and sell books \n",
+      "id": "6f1e"
+    },
+    {
+      "datetime": "August 14, 2025 10:50:46 PM",
+      "title": "react-tutorial-post",
+      "body": "finally react completed sucessfully \n",
+      "id": "2e07"
+    },
+    {
+      "id": "f8de",
+      "datetime": "August 14, 2025 10:52:23 PM",
+      "title": "final post",
+      "body": "finally deploy this project on netlify and host"
+    }
+  ]
+}
